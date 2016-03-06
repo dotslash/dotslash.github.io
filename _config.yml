@@ -1,12 +1,12 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink: "/:title"
-relative_permalinks: true
+#permalink: "/blog/:title"
+#relative_permalinks: true
 
 highlighter: pygments
 
-timezone: Europe/Helsinki
+timezone: America/Los_Angeles
 
 # Default YAML frontmatter settings
 defaults:
@@ -22,10 +22,6 @@ defaults:
 tag_title_prefix:   "Posts tagged #"
 tag_title_suffix:   ""
 
-# Facebook settings
-fb_admins:          606660677
-avatar:             "/public/images/me_hires.png"
-locale:             en_US
 
 # Image settings
 image_base:          /public/images/
@@ -36,11 +32,9 @@ exclude: ["transfer.sh", README.md]
 #fb_appid:           337414769782635
 
 # Setup
-title:               Vitaly Repin
-tagline:             Sapere aude!
-url:                 "http://vrepin.org"
-paginate:            4
-baseurl:             "/vr"
+title:               Sai Teja Pratap
+url:                 "yesteapea.com"
+baseurl:             ""
 
 # Assets
 #
@@ -51,18 +45,18 @@ sass:
 
 # About/contact
 author:
-  name:              Vitaly Repin
-  url:               https://twitter.com/vitalyrepin
-  email:             vitaly_repin@fsfe.org
+  name:              Sai Teja Pratap
+  url:               https://twitter.com/yesteapea
 
-# Custom vars
-version:             1.0.0
-github:
-  repo:              https://github.com/vitalyrepin/vrepinblog
 
 # Google sitemap generation
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/blog/page:num"
+
 
 # Conversion
 markdown:    redcarpet
@@ -75,10 +69,9 @@ kramdown:
   auto_ids: true
 
 pages_list:
-  About: '/vr/about/'
-  Hobby projects: '/vr/hobbies/'
-  Tags: '/vr/tags/'
-  Feed: '/vr/atom.xml'
+  Blog: '/blog/'
+  Tags: '/tags/'
+  Quotes: '/quotes/'
 
 picture:
   source: "assets/imgs/_fullsize"

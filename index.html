@@ -1,51 +1,18 @@
 ---
 layout: default
-title: Home
+title: About me
 website: true
 geomap: true
 ---
+        <p>Im a 20-something year old software engineer living in the SF Bay Area. If you are wondering what yesteapea means, here you go. <code>Sai Teja Pratap => STP => Yes Tea Pea.</code> I work for <a href="https://www.relcy.com">Relcy, Inc</a> mostly on backend computing and search ranking infrastrcuture. Before that I used to work for <a href="http://rocketfuel.com/" target="_blank">Rocket Fuel, Inc.</a>. Before that I was doing my Bachelors in <a href="https://www.cse.iitb.ac.in/">Computer Science at IIT Bombay</a> </p>
+        <p>This webpage is created just for the sake of it as I did not know what to put on the home page. (This is certainly better than an empty homepage which was my initial plan). Now that you are here, checkout something which might be be interest. </p>
+        <ul>
+            <li>A <a href="https://www.slack.com">slack</a> plugin I wrote : <a href="http://yesteapea.com/slack/support-random">Random slash command Utils</a></li>
+            <li>I used to blog occasionally at <a href="http://yesteapea.wordpress.com">yesteapea.wordpress.com</a></li> and now Im moving to this jekyll based blog
+            <li>My collection of quotes : <a href="/quotes">Quotes</a></li> 
+			<li>I maintain my bookmarks at <a href="http://bm.yesteapea.com:8085">bm.yesteapea.com:8085 </a>. The code for this can be found at <a href="https://github.com/dotslash/bookmarks">github.com/dotslash/bookmarks</a></li>
+			<li>This website has a mix of static and dynamic content load balanced by nginx. The static content is a fork of <a href="https://github.com/vitalyrepin/vrepinblog">github.com/vitalyrepin/vrepinblog</a></li> The dynamic content is built in python, which i use to host any apps I make
+			<li>Im <a href="https://twitter.com/yesTeaPea">yesteapea on twitter</a>, <a href="https://github.com/dotslash">dotslash on github</a> and <a href="https://www.linkedin.com/in/stpratap">stpratap on linkedin</a> </li>
+        </ul>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-    
-    {{ post.excerpt }} 
-    {% capture content_words %} 
-      {{ post.content | number_of_words }} 
-    {% endcapture %} 
-    {% capture excerpt_words %} 
-      {{ post.excerpt | number_of_words }} 
-    {% endcapture %} 
-    {% if excerpt_words != content_words %}
-    <p><a class="btn btn-sm btn-primary" href="{{site.baseurl}}{{ post.url }}/#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
-    </p>
-    {% endif %}
-
-    {% include tagsforpost.html tags=post.tags %}
-
-  </article>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
-
-
-{% include analytics.html %}
+<br/>
