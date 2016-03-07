@@ -5,16 +5,17 @@ website: true
 permalink: blog/
 ---
 
-<div class="posts">
+<ul class="posts">
   {% for post in paginator.posts %}
-  <article class="post">
-    <h1 class="post-title">
+  <li class="archive_list">
+    <!--h1 class="post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}
       </a>
-    </h1>
-
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+    </h1-->
+<time style="color:#666;font-size:11px;" datetime='{{post.date | date: "%Y-%m-%d"}}'>{{post.date | date: "%m/%d/%y"}}</time> <a class="archive_list_article_link" href='{{site.baseurl}}{{post.url}}'>{{post.title}}</a>
+    <p class="summary">{{post.summary}}
+    <!--time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
     
     {{ post.excerpt }} 
     {% capture content_words %} 
@@ -27,12 +28,15 @@ permalink: blog/
     <p><a class="btn btn-sm btn-primary" href="{{site.baseurl}}{{ post.url }}/#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
     </p>
     {% endif %}
-
     {% include tagsforpost.html tags=post.tags %}
-
-  </article>
+	-->
+    {% for tag in post.tags %}
+	   <a href="{{site.baseurl}}/tag/{{ tag }}">#{{ tag }}</a>
+	{% endfor %}</p>
+	</p>
+  </li>
   {% endfor %}
-</div>
+</ul>
 
 <div class="pagination">
   {% if paginator.next_page %}
@@ -45,6 +49,6 @@ permalink: blog/
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
-</div>
+</dev>
 
 

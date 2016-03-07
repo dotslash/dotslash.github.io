@@ -3,7 +3,7 @@ layout: post
 title: How I will be using facebook
 tags: ['facebook']
 comments: true
-summary: "How to add metadata to the Jekyll-based site: google sitemap xml, Open Graph and plain old meta-tags."
+summary: "Why am I back on fb and how I will be using it"
 ---
 Inspite of me completely hating facebook for the product it has become right now (maybe in the Indian context), unfortunately there is no other realistic way to keep in touch with 'friends'. I was off facebook for all practical purposes for about 1.5 years and now I decided to let more people be my friends on facebook.
 

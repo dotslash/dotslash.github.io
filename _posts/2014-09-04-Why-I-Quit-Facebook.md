@@ -2,7 +2,7 @@
 layout: post
 title: Why I quit Facebook
 comments: true
-summary: "How to add metadata to the Jekyll-based site: google sitemap xml, Open Graph and plain old meta-tags."
+summary: "The reason I quit facebook"
 tags: ['facebook']
 ---
 
