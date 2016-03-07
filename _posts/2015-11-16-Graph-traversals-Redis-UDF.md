@@ -16,7 +16,7 @@ Redis supports UDFs in [lua](http://www.lua.org/) language. For detail more deta
 
 ```
 redis-cli script load "$(cat ~/find_parent.lua)"
-# this loads the lua script in 'find_parent.lua' to redis 
+# this loads the lua script in 'find_parent.lua' to redis
 # the output for redis outputs 'SHA1 digest of the script
 # 9e4c3550b2961d085916ecdead255cde6b450f6b in my case
 # http://redis.io/commands/script-load
@@ -70,10 +70,10 @@ def get_root(val):
         limit -= 1
     return val
 start = time.time()
-print &quot;start&quot;, start
+print "start", start
 for i in xrange(tc):
     get_root(str(i%1000))
- 
+
 end = time.time()
 print "end  ", end
 print end-start
@@ -111,7 +111,7 @@ start = time.time()
 print "start", start
 for i in xrange(tc):
     get_root(str(i%1000))
- 
+
 end = time.time()
 print "end  ", end
 print end-start
@@ -142,4 +142,3 @@ When every node in itself is a tree (last row), we can observe the extra cost it
 5.  **UPDATE : Why aerospike does not support this**  
     “The UDF can operate on a single record in an invocation. Once its is invoked for a record, it cannot access other records. The basic reason why this is not allowed is that the record may be on a different node. We don’t want the UDF to do distributed transaction” – [https://discuss.aerospike.com/t/graph-traversal-using-udf/2127/2?u=yesteapea](https://discuss.aerospike.com/t/graph-traversal-using-udf/2127/2?u=yesteapea).  
     It will be interesting to see how well redis handles this when [partitioning](http://redis.io/topics/partitioning) is enabled
-

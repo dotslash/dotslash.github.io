@@ -25,19 +25,19 @@ But we can do better. The following code works perfectly fine for counting the n
 //for 64 bit numbers
 int NumberOfSetBits64(long long i)
 {
-    i = i - ((i >> 1) & 0x5555555555555555);
-    i = (i & 0x3333333333333333) +
-        ((i >> 2) & 0x3333333333333333);
-    i = ((i + (i >> 4)) & 0x0F0F0F0F0F0F0F0F);
-    return (i*(0x0101010101010101))>>56;
+  i = i - ((i >> 1) & 0x5555555555555555);
+  i = (i & 0x3333333333333333) +
+  ((i >> 2) & 0x3333333333333333);
+  i = ((i + (i >> 4)) & 0x0F0F0F0F0F0F0F0F);
+  return (i*(0x0101010101010101))>>56;
 }
 //for 32 bit integers
 int NumberOfSetBits32(int i)
 {
-    i = i - ((i >> 1) & 0x55555555);
-    i = (i & 0x33333333) + ((i >> 2) & 0x33333333);
-    i = ((i + (i >> 4)) & 0x0F0F0F0F);
-    return (i*(0x01010101))>>24;
+  i = i - ((i >> 1) & 0x55555555);
+  i = (i & 0x33333333) + ((i >> 2) & 0x33333333);
+  i = ((i + (i >> 4)) & 0x0F0F0F0F);
+  return (i*(0x01010101))>>24;
 }
 ```
 
@@ -71,10 +71,10 @@ Multiplying this number with 0X01010101 will result in a number whose most signi
 ```c++
 int NumberOfSetBits32(int i)
 {
-    i = (i & 0x55555555) + ((i >> 1) & 0x55555555);
-    i = (i & 0x33333333) + ((i >> 2) & 0x33333333);
-    i = (i & 0x0F0F0F0F) + (i >> 4)) & 0x0F0F0F0F);
-    return (i*(0x01010101))>>24;
+  i = (i & 0x55555555) + ((i >> 1) & 0x55555555);
+  i = (i & 0x33333333) + ((i >> 2) & 0x33333333);
+  i = (i & 0x0F0F0F0F) + (i >> 4)) & 0x0F0F0F0F);
+  return (i*(0x01010101))>>24;
 }
 ```
 
