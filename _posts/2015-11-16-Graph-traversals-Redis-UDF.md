@@ -63,7 +63,7 @@ tc = int(sys.argv[1])
 rc = redis.StrictRedis(host='127.0.0.1')
 def get_root(val):
     limit = 100
-    while limit &gt; 0:
+    while limit > 0:
         pres = rc.get(val)
         if pres == None : return val
         val = pres
@@ -136,9 +136,10 @@ When every node in itself is a tree (last row), we can observe the extra cost it
 ## Notes/Extra Reading
 
 1.  All these make a lot of sense when the DB is not close to its full load capacity. If full capacity, it gets tricky, but I believe even in that case UDF can only make things better.
-2.  Latency Numbers Every Programmer Should Know : [https://gist.github.com/jboner/2841832](https://gist.github.com/jboner/2841832)
-3.  Source code : [https://gist.github.com/dotslash/5238a225072d2e74627c](https://gist.github.com/dotslash/5238a225072d2e74627c)
+2.  Latency Numbers Every Programmer Should Know - [gist.github.com/jboner/2841832](https://gist.github.com/jboner/2841832)
+3.  Source code - [gist.github.com/dotslash/5238a225072d2e74627c](https://gist.github.com/dotslash/5238a225072d2e74627c)
 4.  One downside of this is debugging is really painful and documentation redis has for UDF is pretty poor (IMHO) or its only me (?). But before considering this, keep in mind that ‘Premature optimization is root of all evil’
-5.  **UPDATE : Why aerospike does not support this**  
-    “The UDF can operate on a single record in an invocation. Once its is invoked for a record, it cannot access other records. The basic reason why this is not allowed is that the record may be on a different node. We don’t want the UDF to do distributed transaction” – [https://discuss.aerospike.com/t/graph-traversal-using-udf/2127/2?u=yesteapea](https://discuss.aerospike.com/t/graph-traversal-using-udf/2127/2?u=yesteapea).  
+5.  Why aerospike does not support this
+    >The UDF can operate on a single record in an invocation. Once its is invoked for a record, it cannot access other records. The basic reason why this is not allowed is that the record may be on a different node. We don’t want the UDF to do distributed transaction” – [aerospike-forums](https://discuss.aerospike.com/t/graph-traversal-using-udf/2127/2?u=yesteapea).  
+
     It will be interesting to see how well redis handles this when [partitioning](http://redis.io/topics/partitioning) is enabled
