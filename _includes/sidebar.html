@@ -4,15 +4,12 @@ styles, `#sidebar-checkbox` for behavior. -->
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
-  <div class="sidebar-item">
-    <p>{{ site.description }}</p>
-  </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/blog">Blog</a>
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
     <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/tags">Tags</a>
     <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/quotes">Quotes</a>
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Latest posts</a>
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/blog">Blog</a>
 
     <ul class="posts">
       {% for post in site.posts limit:20 %}
@@ -21,7 +18,7 @@ styles, `#sidebar-checkbox` for behavior. -->
         <a href="{{site.baseurl}}{{ post.url }}">
           {{ post.title }}</a>
         </li>
-        {% endfor %}  
+        {% endfor %}
       </ul>
 
       {% comment %}
