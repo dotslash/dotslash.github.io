@@ -72,9 +72,11 @@ pages_list:
   Blog: '/blog/'
   Tags: '/tags/'
   Quotes: '/quotes/'
+  Bookmarks: '/bm/'
+  Slack Plugin : '/slack/support-random'
+
 
 picture:
   source: "assets/imgs/_fullsize"
   output: "generated"
   markup: "picture"
-
