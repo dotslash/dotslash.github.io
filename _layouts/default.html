@@ -32,14 +32,24 @@
       <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES * * */
       var disqus_shortname = 'yesteapea';
-      {% unless page.gamla_disqus_satte %}
+      //{% unless page.gamla_disqus_satte %}
       var disqus_identifier = '{{ page.id | escape }}';
       var disqus_title = '{{ page.title | escape }}';
       var disqus_url = '{{site.url}}{{site.baseurl}}{{ page.url }}';
-      {% endunless %}
+      //{% endunless %}
       /* * * DON'T EDIT BELOW THIS LINE * * */
+      if (!disqus_url.startsWith("http")) {
+        disqus_url = "http://" + disqus_url;
+      }
+      var disqus_config = function () {
+          this.page.url = disqus_url;
+          this.page.identifier = disqus_identifier;
+          this.page.title = disqus_title;
+      };
       (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
       })();

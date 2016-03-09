@@ -33,7 +33,7 @@ exclude: ["transfer.sh", README.md]
 
 # Setup
 title:               Sai Teja Pratap
-url:                 "yesteapea.com"
+url:                 "https://yesteapea.com"
 baseurl:             ""
 
 # Assets
