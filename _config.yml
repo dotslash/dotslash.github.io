@@ -73,7 +73,7 @@ pages_list:
   Tags: '/tags/'
   Quotes: '/quotes/'
   Bookmarks: '/bm/'
-  Slack Plugin : '/slack/support-random'
+  Slack Plugin : '/slack/support-random/'
 
 
 picture:
