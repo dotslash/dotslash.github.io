@@ -6,7 +6,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <div class="sidebar" id="sidebar">
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
     <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/bm">Bookmarks</a>
     <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/slack/support-random">Slack Plugin</a>
     <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/quotes">Quotes</a>
@@ -28,7 +28,8 @@ styles, `#sidebar-checkbox` for behavior. -->
       `layout: page` in the front-matter. See readme for usage.
       {% endcomment %}
 
-
+      {% comment %}
+      Commented this out as I dont need this
       {% assign pages_list = site.pages | sort:"url" %}
       {% for node in pages_list %}
       {% if node.title != null %}
@@ -37,6 +38,8 @@ styles, `#sidebar-checkbox` for behavior. -->
       {% endif %}
       {% endif %}
       {% endfor %}
+      {% endcomment %}
+
     </nav>
 
   </div>

@@ -70,7 +70,7 @@ kramdown:
 
 pages_list:
   Blog: '/blog/'
-  Tags: '/tags/'
+  Blog Tags: '/tags/'
   Quotes: '/quotes/'
   Bookmarks: '/bm/'
   Slack Plugin : '/slack/support-random/'
