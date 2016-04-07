@@ -24,3 +24,4 @@ permalink: quotes/
 - There are three kinds of lies: lies, damn lies, and statistics. - **Benjamin Disraeli**
 - Don't optimize for sub-optimal outcomes - **Rohit Satapathy**
 - Nobody is as good as they claim. Nobody is as bad as they seem - **Rohit Satapathy**
+- Never let the merely urgent get in the way of the truly important
