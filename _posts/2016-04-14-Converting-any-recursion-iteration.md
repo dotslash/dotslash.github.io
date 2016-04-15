@@ -20,7 +20,7 @@ Lets start with a simple example, the [Tower of Hanoi](https://en.wikipedia.org/
 >
 > [Tower of Hanoi wikipedia](https://en.wikipedia.org/wiki/Tower_of_Hanoi)
 
-The code below contains the recursive. The tricky part in converting this to stack is, there are 2 recursive calls. If there is only one it would be straight forward using a simple while loop.
+The code below implements a recursive solution. The tricky part in converting this to stack is there are 2 recursive calls. If there is only one it would be straight forward using a simple while loop.
 
 ``` python
 def hanoi(n, fr, to, buf):
@@ -32,9 +32,10 @@ def hanoi(n, fr, to, buf):
     print "{} {}->{}".format(n, fr, to)
     hanoi(n-1, buf, to, fr)
 ```
-Now lets think of how the compiler deals with stack. Before the first call to hanoi, it saves the state of the function's execution, in the call stack's present entry, pushes a new entry to the stack for recursive call and starts executing the operations in recursive call. Lets do the same thing.
+Now lets think of how the compiler deals with stack. Before the first call to hanoi, it saves the state of the function's execution, in the call stack's present entry, pushes a new entry to the stack for recursive call and starts executing the operations in recursive call. The following code implements that.
 
 ```python
+#Details explained after the code block ends 
 def hanoi_iter(n, fr, to, buf):
     stack = list() #python's list can be used as stack
     stack.append(('full', n, fr, to, buf))
@@ -51,7 +52,7 @@ def hanoi_iter(n, fr, to, buf):
             stack.append(('step1', n, fr, to, buf))
             stack.append(('full', n-1, fr, buf, to))
 ```
-I'm differentiating between saved state(`step1`) and full function call(`full`) by the first value (lets call it operation) in stack entries. Until the stack becomes empty, we pop an entry from stack, handle the base cases, then work based on the operation.
+I'm differentiating between saved state(`step1`) and full function call(`full`) by the first value (lets call it operation) in stack entries. Until the stack becomes empty we pop an entry from stack, handle the base cases, then work based on the operation.
 
 For the saved state, print the move and do a full call on a smaller problem. For the full case, save the state and mark the state as `'step1'`, and do a full call on the sub problem. That does the job.
 
@@ -68,6 +69,9 @@ One recursive solution for this is to
 The code below implements that
 
 ```python
+# Returns all ways of picking 'k' elements in the 'inp' list from index 'start' 
+# (ie k elements in inp[start:]). For all the solutions returned, 
+# elements in to_add will be prepended
 def selectK(inp, k, start=0, to_add=[]):
     if (len(inp) - start) < k or k < 0:
         #invalid
@@ -100,6 +104,7 @@ Here we have 2 recursive calls and we need results of both of them to compute th
 The main problem here is passing the return value. Lets go back to how compiler does call stacks. In the call stack once an entry is popped then its output is determined and passed to the caller's stack. So we need exactly one variable which can pass the return variable between caller and callee. The code below does exactly that.
 
 ```python
+#Details explained after the code block ends 
 def selectK_rec(inp, k):
     stack = list()
     # 5 elements in the tuple
@@ -143,6 +148,6 @@ def selectK_rec(inp, k):
             ret = with_pres
     return ret
 ```
-I initialized the `ret` var to None. Wherever in the recursive code, I returned a value or used a return value, in the stack solution I assign/use `ret`. Finally I return the same variable.
+I initialized the `ret` var to None. Wherever I return a value or use a return value in recursive code, I assign/use `ret` in the stack version. Apart from that the logic in the loop is exactly same as the function body of recursive solution. When the stack becomes empty `ret` contains the solution. 
 
 With this approach any recursive code can be converted to stack based iteration. The [full code with examples](https://gist.github.com/dotslash/8fb472cd9fa22d9f126b57d5e2e17c9c) is on gist.
