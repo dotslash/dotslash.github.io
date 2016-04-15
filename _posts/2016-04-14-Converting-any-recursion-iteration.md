@@ -20,7 +20,7 @@ Lets start with a simple example, the [Tower of Hanoi](https://en.wikipedia.org/
 >
 > [Tower of Hanoi wikipedia](https://en.wikipedia.org/wiki/Tower_of_Hanoi)
 
-The below code contains both the recursive and iterative solution. The tricky part is there are 2 recursive calls in the function. If there is only one recursive call it would be straight forward using a simple while loop.
+The code below contains the recursive. The tricky part in converting this to stack is, there are 2 recursive calls. If there is only one it would be straight forward using a simple while loop.
 
 ``` python
 def hanoi(n, fr, to, buf):
@@ -32,7 +32,7 @@ def hanoi(n, fr, to, buf):
     print "{} {}->{}".format(n, fr, to)
     hanoi(n-1, buf, to, fr)
 ```
-Now lets think of how the compiler deals with stack. Before the first call to hanoi, it saves the state of the function's execution, in the call stack's present entry, pushes a new entry to the stack for recursive call and starts executing the operations in recursive call. Lets do the same thing
+Now lets think of how the compiler deals with stack. Before the first call to hanoi, it saves the state of the function's execution, in the call stack's present entry, pushes a new entry to the stack for recursive call and starts executing the operations in recursive call. Lets do the same thing.
 
 ```python
 def hanoi_iter(n, fr, to, buf):
@@ -53,7 +53,7 @@ def hanoi_iter(n, fr, to, buf):
 ```
 I'm differentiating between saved state(`step1`) and full function call(`full`) by the first value (lets call it operation) in stack entries. Until the stack becomes empty, we pop an entry from stack, handle the base cases, then work based on the operation.
 
-For saved state, print the move and then do full call on smaller problem. For the full case, we save the state and mark the state as `'step1'`, and then do the full call on sub problem. That does the job.
+For the saved state, print the move and do a full call on a smaller problem. For the full case, save the state and mark the state as `'step1'`, and do a full call on the sub problem. That does the job.
 
 This formulation works as long as the functions have no return value. The N Choose K problem will tackle that.
 ###N Choose K
@@ -65,7 +65,7 @@ One recursive solution for this is to
 - Do not pick the first element of list and pick k elements from sublist from 1 to end
 - Return the union of both
 
-The below code implements that
+The code below implements that
 
 ```python
 def selectK(inp, k, start=0, to_add=[]):
@@ -97,7 +97,7 @@ def selectK(inp, k, start=0, to_add=[]):
 ```
 Here we have 2 recursive calls and we need results of both of them to compute the final result. (In the previous problem we did not need the return value at all) So we split the function to 3 (as opposed to 2 for Hanoi). I marked them as `'full'` , `'step1'`, `'step2'`
 
-The main problem is passing the return value. If we go back to how compiler does call stacks, its just a stack and one a stack is popped then its output is determined and passed to the caller's stack. So we need exactly one variable which can pass the return variable between caller and callee.
+The main problem here is passing the return value. Lets go back to how compiler does call stacks. In the call stack once an entry is popped then its output is determined and passed to the caller's stack. So we need exactly one variable which can pass the return variable between caller and callee. The code below does exactly that.
 
 ```python
 def selectK_rec(inp, k):
@@ -143,6 +143,6 @@ def selectK_rec(inp, k):
             ret = with_pres
     return ret
 ```
-I initialize the `ret` var to None. Wherever in the recursive code, I returned a value, in the stack solution I assign that value to `ret`. Finally return the same variable.
+I initialized the `ret` var to None. Wherever in the recursive code, I returned a value or used a return value, in the stack solution I assign/use `ret`. Finally I return the same variable.
 
-With this approach any recursive code can be converted to stack based iteration. I shared the [full code with examples](https://gist.github.com/dotslash/8fb472cd9fa22d9f126b57d5e2e17c9c) as a gist
+With this approach any recursive code can be converted to stack based iteration. The [full code with examples](https://gist.github.com/dotslash/8fb472cd9fa22d9f126b57d5e2e17c9c) is on gist.
