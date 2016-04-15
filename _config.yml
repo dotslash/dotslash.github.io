@@ -27,7 +27,7 @@ tag_title_suffix:   ""
 image_base:          /public/images/
 
 # Do not copy these file to the output directory
-exclude: ["transfer.sh", README.md]
+exclude: ["transfer.sh", README.md, "codepg/"]
 
 #fb_appid:           337414769782635
 
@@ -54,7 +54,7 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
 
-paginate: 5
+paginate: 10
 paginate_path: "/blog/page:num"
 
 
@@ -70,7 +70,6 @@ kramdown:
 
 pages_list:
   Blog: '/blog/'
-  Blog Tags: '/tags/'
   Quotes: '/quotes/'
   Bookmarks: '/bm/'
   Slack Plugin : '/slack/support-random/'
