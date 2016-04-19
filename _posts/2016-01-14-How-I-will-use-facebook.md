@@ -14,7 +14,7 @@ Inspite of me completely hating facebook for the product it has become right now
 - **It just kills time**
 
 ###Why exactly facebook
-- Its good to have an idea of what my friends are doing. Right now I have no idea whats happening in the lives of my friends who don't live in the bay area.
+- Its good to know what my friends are doing. Right now I have no idea whats happening in the lives of my friends who don't live in the bay area.
 - The number of people who I consider friends only keeps increasing as I meet new people on new occasions/events. (3 meets in person is fair cut-off for a friend)
 
 ###How will I be using facebook
@@ -36,5 +36,5 @@ This is very dynamic and is subject to a lot of changes. The main theme behind a
     _Me_ : Hi  
     _Friend_ : [Help request or anything productive] or [Proposal for General in person catching up]  
     _Me_ : [Sensible reply]  
-- **My fb write activity** : I don't see myself adding more than one post per month (excludes birthday wishes?). No comments on posts unless required.
+- **My fb write activity** : I don't see myself adding more than one post per month. No comments on posts unless required.
 - **Tagging me** : Please avoid randomly tagging me and could expect the same from me
