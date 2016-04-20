@@ -5,3 +5,4 @@
   - keybase.io
   - setting up SSL
 - Go vs Java (After writing something complicated in GO)
+- deamonize processes
