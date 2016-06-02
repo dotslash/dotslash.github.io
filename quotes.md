@@ -25,3 +25,4 @@ permalink: quotes/
 - Don't optimize for sub-optimal outcomes - **Rohit Satapathy**
 - Nobody is as good as they claim. Nobody is as bad as they seem - **Rohit Satapathy**
 - Never let the merely urgent get in the way of the truly important
+- There comes a time in every life when the past recedes and the future opens. It’s that moment when you turn to face the unknown. Some will turn back to what they already know. Some will walk straight ahead into uncertainty. I can’t tell you which one is right. But I can tell you which one is more fun. - **Phil Knight**
