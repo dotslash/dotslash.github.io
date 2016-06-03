@@ -49,7 +49,11 @@ Redis source corresponding to this :  [dictGetSomeKeys](https://github.com/antir
 
 ## Record level expiry : Redis
 
-In Redis each key can have its own expiry set. Redis maintains in another hash table (`expires` table) the keys and their corresponding expiry times. It has a periodic task which removes expired entries. This task picks 20 random elements in this `expires` table and deletes the expired elements. A single invocation of this task keeps repeating until < 25% of the sample need to removed.
+In Redis each key can have its own expiry set. Redis maintains in another hash table (`expires` table) the keys and their corresponding expiry times. It has a periodic task which removes expired entries. This is what the task does
+
+- Test 20 random keys from the set of keys with an associated expire.
+- Delete all the keys found expired.
+- If more than 25% of keys were expired, start again from step 1.
 
 But this does not guarantee that all expired entries are removed. So every read operation will check if the element being accessed is stale or not and removes it if the entry is stale.
 
