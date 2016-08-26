@@ -8,3 +8,8 @@
 - deamonize processes
 - docker, ami, vagrant etc
 - websockets
+- cpp
+  - Protos : why no builders in c++; why no Fluent interface?
+  - templates
+  - ownership of objects:  stack, heap; innocenct copies
+  - cpp web framework, build
