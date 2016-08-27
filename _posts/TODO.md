@@ -4,7 +4,7 @@
   - If ssl, Why & what is end-end encryption (whatsapp, telegram) [+]
   - keybase.io 
   - setting up SSL
-- cpp/Go vs Java (After writing something complicated in GO) [too hard for a novice]
+- cpp/Go vs Java [too hard for a cpp/go novice]
 - deamonize processes [useless ?]
 - docker, ami, vagrant etc
 - websockets
