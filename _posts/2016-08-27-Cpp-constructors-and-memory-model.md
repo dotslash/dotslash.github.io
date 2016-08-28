@@ -57,7 +57,6 @@ Any single threaded program's state can be represented using what's on the stack
 what's on the heap. Heap is where all the dynamically allocated memory is
 stored. Stack is the function call stack. 
 
-<img src="/public/images/program-memory.jpg"/>
 Take a look at the below program. We will see how the stack and heap will look like at `Marker`
 
 ```c++
@@ -75,6 +74,7 @@ int main(int argc, char** argv) {
   func();
 }
 ```
+<img src="/public/images/program-memory.jpg" width=400/>  
 
 When the program's execution is at `Marker` (before the delete statement), our
 stack and heap are as follows.
