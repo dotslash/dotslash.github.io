@@ -1,0 +1,15 @@
+- Benchmarking databases [v v v hard]
+- Experience with Aerospike [-]
+- How web security works
+  - If ssl, Why & what is end-end encryption (whatsapp, telegram) [+]
+  - keybase.io 
+  - setting up SSL
+- cpp/Go vs Java [too hard for a cpp/go novice]
+- deamonize processes [useless ?]
+- docker, ami, vagrant etc
+- websockets
+- cpp
+  - Protos : why no builders in c++; why no Fluent interface? [+]
+  - templates
+  - ownership of objects:  stack, heap; innocenct copies [+]
+  - cpp web framework, build [+]
