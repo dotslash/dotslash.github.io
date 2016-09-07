@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Expiring records : Redis ttl, guava cache"
-tags: ['tech']
+tags: ['tech', 'redis']
 comments: true
 summary: "How do redis ttls and guava cache expiring records work"
 ---
