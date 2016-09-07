@@ -5,15 +5,15 @@ tags: ['facebook']
 comments: true
 summary: "Why am I back on fb and how I will be using it"
 ---
-Inspite of me completely hating facebook for the product it has become right now (maybe in the Indian context), unfortunately there is no other realistic way to keep in touch with 'friends'. I was off facebook for all practical purposes for about 1.5 years and now I decided to let more people be my friends on facebook.
+Inspite of me completely hating facebook for the product it has become right now (or atleast the way my friends use it), unfortunately there is no other realistic way to keep in touch with 'friends'. I was off facebook for all practical purposes for about 1.5 years and now I decided to let more people be my friends on facebook.
 
 ###Arguments against facebook
 
-- I donot want to see glorified versions of people's life and most of the stuff people put on facebook is pure garbage.
+- I donot want to see glorified versions of people's lives and most of the stuff people put on facebook is pure garbage.
 - (Adding to the garbage in provious point) I find some posts by friends very provoking and they are too tempting to not comment. Sometimes they end up as heated arguments/fights
 - **It just kills time**
 
-###Why exactly facebook
+###But Why
 - Its good to know what my friends are doing. Right now I have no idea whats happening in the lives of my friends who don't live in the bay area.
 - The number of people who I consider friends only keeps increasing as I meet new people on new occasions/events. (3 meets in person is fair cut-off for a friend)
 
@@ -23,7 +23,7 @@ This is very dynamic and is subject to a lot of changes. The main theme behind a
 - **Policy for adding friends** : One of the below criteria should be satisfied
   - People who I met atleast 3 times : Because I would not meet a random person 3 times!
   - People who I know well : If person in question thinks he/she is not sure, then it means the person failed this check!
-- **A clean filtered feed** : My feed shall only contain people's life events (and other random stuff I follow). **Edit**: Just realized this requires too much effort. So I have a filter on people (and not on type of activity) and a 15 mins daily budget for facebook.com (not messenger.com)
+- **A clean filtered feed** : My feed shall only contain people's life events (and other random stuff I follow). **Update**: Just realized this requires too much effort. So I have a filter on people (and not on type of activity) and a 15 mins daily budget for facebook.com (not messenger.com) **Update 2** : I gave up on this.
 - **Very Passive on messaging** : No bullshitting unless the person is a '_close friend_'. See the examples below and I would never initiate _'bad chat'_
   - Bad chat  
     _Friend_ : Hi  
