@@ -15,10 +15,11 @@ permalink: quotes/
 - Never forget what you are. The rest of the world will not. Wear it like armor and it can never be used to hurt you - **Tyrion Lannister**
 - Most people do not listen with the intent to understand; they listen with the intent to reply.
 - There is a huge amount of freedom that comes when you take nothing personally. - **Miguel Ruiz**
+- He who has a why to live for can bear almost any how. - **Friedrich Nietzsche**
 - Better to Remain Silent and Be Thought a Fool than to Speak and Remove All Doubt - **Abraham Lincoln via Bible**
 - Those who would give up essential liberty, to purchase a little temporary safety, deserve neither - **Benjamin franklin**
 - The man who refuses to judge, who neither agrees nor disagrees, who declares that there are no absolutes and believes that he escapes responsibility, is the man responsible for all the blood that is now spilled in the world. - **John Galt (in 'Atlas Shrugged' by 'Ayn Rand')**
-- Thou shalt believe in thine own self - **Sai Teja Pratap**
+- There are not many things with sacrificing peace of mind for - **Sai Teja Pratap**
 - The problem with internet quotes is we never know who wrote them - **Abe Lincoln**
 - I use the word 'quotation' for lack of a better description.
 - There are three kinds of lies: lies, damn lies, and statistics. - **Benjamin Disraeli**
