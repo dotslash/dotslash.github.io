@@ -8,7 +8,7 @@ tags: ['facebook']
 
 ### Waiting for a trigger
 
-I was a very active user on fb. I could not resist my self from not sharing anything remotely interesting. I always liked poking my friends on their posts and finding out flaws in the what they write. This used to easily consume 3-4 hours of my day and I always hated that. I wanted to get out of facebook, but did not because there is not enough motivation and I was scared of losing all my contacts.
+I was a very active user on fb. I could not resist my self from not sharing anything remotely interesting. I liked poking my friends on their posts and finding out flaws in the what they write. This used to consume 3-4 hours of my day and I always hated that. I wanted to get out of facebook, but did not because there is not enough motivation and I was scared of losing all my contacts.
 
 ### Here comes the trigger
 
@@ -25,7 +25,7 @@ I was a very active user on fb. I could not resist my self from not sharing anyt
 >
 >![Screenshot](https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xpa1/t39.2229-6/851536_1486989024887235_1467170772_n.jpg "An example spam mail")
 
-All of a sudden I was the hot lunch table discussion in my company!
+All of a sudden I was the lunch table discussion at my workplace!
 
 ### After math
 
