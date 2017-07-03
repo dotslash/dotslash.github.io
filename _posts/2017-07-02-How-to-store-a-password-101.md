@@ -8,7 +8,7 @@ tags: ['tech']
 
 Disclaimer : I dont claim expertise in what Im writing about. Feel free to correct me if anything seems off.
 
-In this post I will try to briefly explain how passwords should be stored in a database which is reasonably safe from attackers. The details of what hashing algorithms to use is beyond the scope of this article (and beyond my knowledge). 
+In this post I will try to briefly explain how passwords should be _'safely'_ stored in a database. The details of what hashing algorithms to use is beyond the scope of this article (and beyond my knowledge). 
 
 ## Definitions
 - `hash` : In this context hash is a [cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function). Think of this as a function with these properties
@@ -32,7 +32,7 @@ So the databse contains the following fields
 
 If an attacker gains access to the database, they have `hash(password)`. But because the inverse to the hash is not known nothing can be done (not really!)
 
-However, many users have naive passwords and the hash values for these passwords are known - E.g [oranges - 91b07b3169d8a7cb6de940142187c8df](https://md5hashing.net/hash/md5/91b07b3169d8a7cb6de940142187c8df). So when an attacker gets access to the database, they will match the hashed passwords against these known hash values and gain access to those accounts which have known passwords.
+However, many users have naive passwords and the hash values for these passwords are known - E.g [oranges - 91b07b3169d8a7cb6de940142187c8df](https://md5hashing.net/hash/md5/91b07b3169d8a7cb6de940142187c8df). So when an attacker gets access to the database, they will match the hashed passwords against these known hash values and gain access to those accounts which have known passwords. This is called [Rainbow table attack](https://en.wikipedia.org/wiki/Rainbow_table).
 
 ## Salted one way hash 
 The problem we had before is that, the hash of certain passwords is known, which means it is not entirely true that the inverse of our hash function is not known. 
