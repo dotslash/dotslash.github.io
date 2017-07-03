@@ -25,7 +25,7 @@ This is a no brainer. Do not store the passwods as is. If an attacker gets acces
 ## One way hash
 A simple workaround for this problem is to use a one way hash. So if my password is `'really'`, then the user database stores `hash('really')` as my hashed password. When a user enters the password, the `hash(password)` is matched against the one in the database. 
 
-So the databse contains the following fields
+So the database contains the following fields
 
 - user_id
 - password_hash : `hash(password)`
@@ -39,13 +39,13 @@ The problem we had before is that, the hash of certain passwords is known, which
 
 Salting is a well known technique which beats this. We generate a random string for each user and hash the result. Essentially we are transforming the user's password to something stronger.
 Example : If my password is '`really'` and the salt is `'az@sd3a='`, the `hash('reallyaz@sd3a=')` is stored in the database.
-So the databse contains the following fields
+So the database contains the following fields
 
 - user_id
 - salt
 - salted\_password\_hash : `hash(salt, password)`
 
-If an attacker gains access to the databse, they have salt and `hash(salt, password)`. But this is not enough to get the password back from this information. Hence the data is secure. 
+If an attacker gains access to the database, they have salt and `hash(salt, password)`. But this is not enough to get the password back from this information. Hence the data is secure. 
 
 That said, brute force is always an option. An attacker can theoritically compute hash values of all strings of size <= 30 and thus be able to know passwords of almost all the users. But that is extremely expensive and not many have the access to such compute power. One way to safe gaurd against this is to use a expensive hash function. This makes brute forcing practically impossible.
 
