@@ -1,17 +1,19 @@
 ---
 layout: post
-title: Protobufs immutability - java , cpp?
+title: Immutability of protobufs - Java vs C++
 comments: true
-summary: "Why are protobufs in java are immutable while their cpp counter parts are not"
+summary: "Why are protobufs in Java are immutable while their cpp counter parts are not"
 tags: ['c++', 'java', 'tech' ]
 ---
 
-###**C++ const keyword**
-The `const` keyword in c++ is the reason why it does not need immutable 
-[protocol buffers](https://developers.google.com/protocol-buffers/). If an object is passed to a function as a const, 
-only the methods which are marked as const can be accessed. See the below example.
+[Protocol buffers](https://developers.google.com/protocol-buffers/) (aka protobufs, protos) are a language-neutral, platform-neutral 
+extensible mechanism for serializing structured data. 
 
-```c++
+###**C++ const keyword**
+C++ does not need immutable protobufs - the `const` keyword is the reason.
+If an object is passed to a function as a const, only the methods which are marked as const can be accessed. See the below example.
+
+```C++
 class Boo {
  public:
   void set_val(int nval) { val = nval; }
@@ -22,24 +24,33 @@ class Boo {
 };
 
 void function(const Boo& b1, Boo& b2) {
-  // The below statement produces compile error for accessing non
+  // The below statement produces compile a error for accessing non
   // const function of a const param. All the other statements are fine.
   b1.set_val(0); 
   b1.get_val();
   b2.set_val(0);
   b2.set_val();
 }
-
 ```
-###**Why are protobufs in java are immutable**
-It is a common pattern in c++ to declare a parameter as a `const` if the function has no intent to modify it.
-Java has no equivalent feature. So the work-around was to make all protobufs immutable.
-So if a function is accepting a protobuf in java, it means it has no intent to modify the protobuf object. 
 
-It is a standard use case to initialize a protobuf and pass it multiple functions which each function sets some
-attributes of the object. For this use case, in c++ the function would accept a non const reference to protobuf, in java
-the function would accept the protobuf's associated builder.
+###**Why are protobufs in Java are immutable**
+Java has no equivalent of C++ `const`. If a function takes in a mutable object,
+just by looking at the function definition, one cannot say whether it is 
+modifying the object or not. So in Java it is preferred to make objects
+immutable as much as possible. This is not a problem in C++ because of the `const` keyword. 
+
+For every proto message definition, the Java protobuf library creates an
+immutable protobuf class and a mutable builder class.
+
+### Conclusion
+
+- Intent to **modify**
+  - C++  : protobuf is passed (not as a  const)
+  - Java : a protobuf builder object is passed
+- Intent to **read** 
+  - C++  : protobuf is passed  as a const
+  - Java : a protobuf object (immutable) is passed
 
 **Some Realization**  
-Im finding it extremely hard to `search` for the right topics and write something reasonably long and meaningful.
-Instead I decided to write about short and `seemingly` obvious things.
+I'm finding it extremely hard to `search` for the right topics and write something reasonably long and 
+meaningful. Instead I decided to write about short and `seemingly` obvious things.
