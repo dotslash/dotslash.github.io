@@ -1,0 +1,56 @@
+---
+layout: post
+title: How are passwords stored?
+comments: true
+summary: "How are passwords stored?"
+tags: ['tech']
+---
+
+**Disclaimer** : I do not claim expertise in what I'm writing about. The goal of this post is to give an extremely high level view on how passwords work. The details like choice of algorithms to use for hashing, salting etc. is beyond the scope of this article (and beyond my knowledge). Feel free to correct me if anything seems off. 
+
+## Definitions
+- `hash` : In this context hash is a [cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function). Think of this as a function with these properties
+  - The inverse cannot be computed - i.e It is practically impossible to find x if hash(x) is known.
+  - It is almost impossible to have 2 inputs with the same hash value (*'Almost'* a [one-to-one function](https://en.wikipedia.org/wiki/Injective_function))
+- `database` : A database containing everything needed to authenticate a user. 
+- `attacker` : A malicous entity who wants to get access to user's real passwords. An attacker could be a rogue developer or an external person.
+- `secure` : A method of storing passwords is considered secure if the attacker cannot know user's real passwords even after having access to the database.
+- `service` : A website/app which requires user to login.
+
+## Storing user passwods as is
+This is a no brainer. No sane service stores passwords as is. If an attacker gets access to the database, they have the password of every single user using the service.
+
+## One way hash
+A simple workaround for this problem is to use a one way hash. So if my password is `'really'`, then the database stores `hash('really')` as my hashed password. When a user enters the password, the `hash(password)` is matched against the one in the database. 
+
+So the database contains the following fields
+
+- user_id
+- password_hash : `hash(password)`
+
+If an attacker gains access to the database, they have `hash(password)`. But because the inverse to the hash is not known nothing can be done (not really!)
+
+However, many users have naive passwords and the hash values for these passwords are known - E.g [oranges - 91b07b3169d8a7cb6de940142187c8df](https://md5hashing.net/hash/md5/91b07b3169d8a7cb6de940142187c8df). So when an attacker gets access to the database, they will match the hashed passwords against these known hash values and gain access to those accounts which have known passwords. This is called [Rainbow table attack](https://en.wikipedia.org/wiki/Rainbow_table).
+
+## Salted one way hash 
+The problem with the previous approach is that the hash of certain passwords is known. This means it is not entirely true that the inverse of the chosen hash function is not known.
+
+[Salting](https://en.wikipedia.org/wiki/Salt_\(cryptography\)) is a well known technique which beats this. A salt is random data that is used as an additional input to the password. Salt and the password are hashed together and stored in the database. Essentially we are transforming the user's password to something stronger. Example : If my password is '`really'` and the salt is `'az@sd3a='`, the `hash('reallyaz@sd3a=')` is stored in the database.
+So the database contains the following fields
+
+- user_id
+- salt
+- salted\_password\_hash : `hash(salt, password)`
+
+If an attacker gains access to the database, they have `salt` and `hash(salt, password)`. But this is not enough to retrieve the actual user password. Hence this data is secure. 
+
+That said, brute force is always an option. In theory, an attacker can compute hash values of all strings of size <= 30 and thus be able to know passwords of almost all the users. But that is extremely expensive and not many have the access to such compute power. One way to safe gaurd against this is to use an expensive hash function. This makes brute forcing practically impossible.
+
+## Conclusion
+
+From what I understand, using a **slow hash function on salted passwords** is the best that can be done to safely store user credentials. 
+
+## Note to users
+- Avoid any website which says it can retrieve your old password, if you forget it.
+- Try not to have a common password for multiple websites. All it takes is one leak!
+- If 2-factor authentication is an option, go for it.
