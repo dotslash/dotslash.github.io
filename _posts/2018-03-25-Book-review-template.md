@@ -22,7 +22,7 @@ instead and finish up my xx books per year goal`.
   to read the book better.
 - It will be easier for me to go back in time and see how i felt about a particular book when I read
   it x years ago. I can see how my thought process evolved over the years.
-- While reading sometimes we all skim through the details; because the content was boring or
+- While reading a book we skim through the details sometimes; because the content was boring or
   because we are lazy. Documenting this information can be helpful while evaluating the book and
   doing a second read.
 - It is easier to share your opinion about a book when you already wrote a review; just share the
