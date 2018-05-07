@@ -60,7 +60,7 @@ To understand the importance of these moral dimensions, try to think what would 
 context of evolution if no humans possess these receptors.  Examples
 - If humans don't care about their babies, that results in a weak next generation.
 - Loyalty to one'e group is important to keep the group together and be united to fight external threats.
-- An untidy environments trigger disgust. This makes use stay clean, thus guarding us from whole
+- An untidy environments trigger disgust. This makes us stay clean, thus guarding us from whole
   range of diseases.
 
 Coming back to conservative vs liberals, Haidt explains that conservatives understand liberals
@@ -73,15 +73,15 @@ that liberals are less ethical [3].
 
 ##  We are groupish
 
-Haidt tries to explain why humans might have evolved to co-operate naturally. Like other animals,
+Haidt tries to explain why humans might have evolved to co-operate. Like other animals,
 humans also fought against neighboring tribes over territory. In such fights the tribes where more
 people co-operated prevailed. This could be one of the key reasons for humans being social and
 groupish.
 
 Haidt gives one more more interesting argument about this subject. Apparently there have multiple
-catastrophes on earth which altered the climate significantly. This would have naturally affected
-many human tribes also. In such situations more social tribes have higher chances of survival than
-the less social ones. Even within a social tribe, the more social humans had higher changes of
+catastrophes on earth which altered the climate significantly. This would have had significant
+affects many human tribes. In such situations tribes which are more social have higher chances of
+survival than the less social ones. Even within tribes, the more social humans had higher changes of
 survival.
 
 
@@ -90,8 +90,8 @@ survival.
 Religion is more than just a set of beliefs about supernatural agents. Religion has been the binding
 force among humans for 1000's of years. Groups that used supernatural agents enforce good moral
 constructs prospered. E.g There has been enough research that we break our moral codes when no one
-is watching. The fear of God makes many people be moral and do good things. Haidt quotes experiments
-which report that conservatives are marginally more `giving` than liberals. Conservatives show
+is watching; the fear of God makes many people be moral and do good things. Haidt quotes experiments
+which report that conservatives are marginally more 'giving' than liberals. Conservatives show
 a lot of compassion for people of their group (race/religion ..). Liberals' compassion is generally
 is more uniform across groups.
 
@@ -104,13 +104,13 @@ and conservatives.
 
 Liberals are very good at `care`. They fought against slavery; they are fighting for gender
 equality; they fought for democracy. They push for changes in the society - at a very rapid pace,
-which can destroy the internal structure of the society. They trivialize the importance of authority
+which can destroy the internal structure of the society. They trivialize the value of authority
 and sanctity which leads to disconnect between the conservatives and liberals.
 
 The less we relate to people holding alternate opinions, the less we have a constructive debate.
 Whether you support the right or the left, it is important to understand the where the other side is
 coming from. The divide can be brought down only if we are willing to engage in a civil conversation
-with people holding opposing views. [4]
+with people holding opposing views[4].
 
 Note that the book does not go in detail about how to solve idealogical differences between good
 people holding conflicting views.
