@@ -23,7 +23,7 @@ I was a very active user on fb. I could not resist my self from not sharing anyt
 >
 >How do I make sure that facebook does not send invites on my behalf?
 >
->![Screenshot](https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xpa1/t39.2229-6/851536_1486989024887235_1467170772_n.jpg "An example spam mail")
+>![Screenshot](https://dotslash.github.io/images/851536_1486989024887235_1467170772_n.jpg "An example spam mail")
 
 All of a sudden I was the lunch table discussion at my workplace!
 
