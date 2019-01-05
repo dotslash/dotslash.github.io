@@ -71,8 +71,7 @@ kramdown:
 pages_list:
   Blog: '/blog/'
   Quotes: '/quotes/'
-  Bookmarks: '/bm/'
-  Slack Plugin : '/slack/support-random/'
+  Bookmarks: 'http://bm.yesteapea.com'
 
 
 picture:
