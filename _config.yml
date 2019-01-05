@@ -78,3 +78,5 @@ picture:
   source: "assets/imgs/_fullsize"
   output: "generated"
   markup: "picture"
+
+theme: jekyll-theme-minimal
