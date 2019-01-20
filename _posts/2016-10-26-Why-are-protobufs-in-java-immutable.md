@@ -9,7 +9,7 @@ tags: ['c++', 'java', 'tech' ]
 [Protocol buffers](https://developers.google.com/protocol-buffers/) (aka protobufs, protos) are a language-neutral, platform-neutral 
 extensible mechanism for serializing structured data. 
 
-###**C++ const keyword**
+### C++ const keyword
 C++ does not need immutable protobufs - the `const` keyword is the reason.
 If an object is passed to a function as a const, only the methods which are marked as const can be accessed. See the below example.
 
@@ -33,7 +33,7 @@ void function(const Boo& b1, Boo& b2) {
 }
 ```
 
-###**Why are protobufs in Java are immutable**
+### Why are protobufs in Java are immutable
 Java has no equivalent of C++ `const`. If a function takes in a mutable object,
 just by looking at the function definition, one cannot say whether it is 
 modifying the object or not. So in Java it is preferred to make objects
