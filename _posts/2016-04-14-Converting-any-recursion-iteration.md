@@ -9,7 +9,7 @@ I've seen a couple of blogs which talk about this, but most of them have very si
 
 Lets start with a simple example, the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) problem.
 
-###Tower of Hanoi
+### Tower of Hanoi
 >The Tower of Hanoi (also called the Tower of Brahma or Lucas' Tower) is a mathematical game or puzzle. It consists of three rods, and a number of disks of different sizes which can slide onto any rod. The puzzle starts with the disks in a neat stack in ascending order of size on one rod, the smallest at the top, thus making a conical shape.
 
 >The objective of the puzzle is to move the entire stack to another rod, obeying the following simple rules:
@@ -57,7 +57,7 @@ I'm differentiating between saved state(`step1`) and full function call(`full`) 
 For the saved state, print the move and do a full call on a smaller problem. For the full case, save the state and mark the state as `'step1'`, and do a full call on the sub problem. That does the job.
 
 This formulation works as long as the functions have no return value. The N Choose K problem will tackle that.
-###N Choose K
+### N Choose K
 Given a list of elements, return all possible ways of picking K elements as a list of lists. There are 6 ways picking 2 elements from `[0,1,2,3]` `[0,1] [0,2] [0,3] [1,2] [1,3] [2,3]`
 
 One recursive solution for this is to
