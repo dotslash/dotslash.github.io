@@ -13,7 +13,7 @@ extensible mechanism for serializing structured data.
 C++ does not need immutable protobufs - the `const` keyword is the reason.
 If an object is passed to a function as a const, only the methods which are marked as const can be accessed. See the below example.
 
-```C++
+``` cpp
 class Boo {
  public:
   void set_val(int nval) { val = nval; }
