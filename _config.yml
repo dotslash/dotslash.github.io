@@ -4,7 +4,7 @@
 # permalink: "/blog/:title"
 # relative_permalinks: true
 
-highlighter: rogue
+highlighter: rouge
 
 timezone: America/Los_Angeles
 
