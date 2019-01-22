@@ -1,10 +1,10 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-#permalink: "/blog/:title"
-#relative_permalinks: true
+# permalink: "/blog/:title"
+# relative_permalinks: true
 
-highlighter: pygments
+highlighter: rogue
 
 timezone: America/Los_Angeles
 
