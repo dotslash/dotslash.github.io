@@ -58,12 +58,7 @@ paginate: 10
 paginate_path: "/blog/page:num"
 
 
-# Conversion
-markdown:    redcarpet
 excerpt_separator: "<!--break-->"
-
-redcarpet:
-  extensions: ["footnotes"]
 
 kramdown:
   auto_ids: true
@@ -71,7 +66,7 @@ kramdown:
 pages_list:
   Blog: '/blog/'
   Quotes: '/quotes/'
-  Bookmarks: 'http://bm.yesteapea.com'
+  Bookmarks: 'https://bm.yesteapea.com'
 
 
 picture:
