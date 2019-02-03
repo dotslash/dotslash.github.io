@@ -4,6 +4,7 @@ title: Quotes
 comments: true
 permalink: quotes/
 ---
+- Never attribute to malice that which is adequately explained by stupidity - **Robert J. Hanlon**
 - Success is how you bounce back once you hit the bottom.
 - Be the change you want to see - **MK Gandhi (Stop complaining)**
 - Do it now. (never postpone things)
@@ -27,4 +28,4 @@ permalink: quotes/
 - Nobody is as good as they claim. Nobody is as bad as they seem - **Rohit Satapathy**
 - Never let the merely urgent get in the way of the truly important
 - There comes a time in every life when the past recedes and the future opens. It’s that moment when you turn to face the unknown. Some will turn back to what they already know. Some will walk straight ahead into uncertainty. I can’t tell you which one is right. But I can tell you which one is more fun. - **Phil Knight**
-- I have decided to stick to love. Hate is too great a burden to bear. - Martin Luther King
+- I have decided to stick to love. Hate is too great a burden to bear. - **Martin Luther King**
