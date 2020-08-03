@@ -36,15 +36,15 @@ Let’s say that 1500 kCal per day is your target calorie intake and 1 gm/kg is 
 |<span style="color:blue">Egg</span>|70|6|0|8.5 ✅✅|0 ❌|
 |<span style="color:blue">Paneer 30gm</span>|150|10|0|6.6 ✅|0 ❌|
 |<span style="color:blue">Curd 100gm</span>|98|11|0|11 ✅✅|0 ❌|
-|<span style="color:green">Moong daal (uncooked 100gm)</span>|350|24|16|6.8 ✅|4.5 ✅|
-|<span style="color:green">Soy chunk (meal maker 50gm)</span>|340|51|13|15 ✅✅|3.8 ✅|
+|<span style="color:green">Moong daal (uncooked 100gm)</span>|350|24|16|6.8 ✅|4.5 ✅✅|
+|<span style="color:green">Soy chunk (meal maker 50gm)</span>|340|51|13|15 ✅✅|3.8 ✅✅|
 |<span style="color:green">Most non starchy vegetables(100 gm raw)</span>|30|2|3|6.5 ✅|10 ✅✅|
 |<span style="color:green">Potato (100 gm raw)</span>|77|2.2|2|2.8 🆗|2.6 🆗|
 |<span style="color:black">Most cooking oils (1 tablespoon, 13 gm)</span>|130|0|0|0 ❌|0 ❌|
 |<span style="color:brown">White rice  (uncooked 100gm)</span>|356|7|1.3|2 🆗|0.37 ❌|
 |<span style="color:brown">Brown rice (uncooked 100gm)</span>|370|8|3.5|2.2 🆗|1 ❌|
-|<span style="color:brown">Fox tail millet (uncooked 100gm)</span>|393|12|9|3 🆗|2.2 🆗|
-|<span style="color:brown">4 whole wheat rotis/phulkas</span>|350|10|10|2.9 🆗|2.9 🆗|
+|<span style="color:brown">Fox tail millet (uncooked 100gm)</span>|393|12|9|3 🆗|2.2 ✅|
+|<span style="color:brown">4 whole wheat rotis/phulkas</span>|350|10|10|2.9 🆗|2.9 ✅|
 
 ### Observations
 
