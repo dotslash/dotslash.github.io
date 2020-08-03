@@ -34,7 +34,7 @@ Let’s say that 1500 kCal per day is your target calorie intake and 1 gm/kg is 
 |--- |--- |--- |--- |--- |--- |
 |<span style="color:blue">Chicken breast 100g</span>|165|31|0|18.8 ✅✅|0 ❌|
 |<span style="color:blue">Egg</span>|70|6|0|8.5 ✅✅|0 ❌|
-|<span style="color:blue">Paneer 30gm</span>|150|10|0|6.6 ✅|0 ❌|
+|<span style="color:blue">Paneer 50gm</span>|150|10|0|6.6 ✅|0 ❌|
 |<span style="color:blue">Curd 100gm</span>|98|11|0|11 ✅✅|0 ❌|
 |<span style="color:green">Moong daal (uncooked 100gm)</span>|350|24|16|6.8 ✅|4.5 ✅✅|
 |<span style="color:green">Soy chunk (meal maker 50gm)</span>|340|51|13|15 ✅✅|3.8 ✅✅|
