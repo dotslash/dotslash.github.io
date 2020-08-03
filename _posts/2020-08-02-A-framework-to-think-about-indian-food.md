@@ -46,7 +46,7 @@ Let’s say that 1500 kCal per day is your target calorie intake and 1 gm/kg is 
 |<span style="color:brown">Fox tail millet (uncooked 100gm)</span>|393|12|9|3 🆗|2.2 ✅|
 |<span style="color:brown">4 whole wheat rotis/phulkas</span>|350|10|10|2.9 🆗|2.9 ✅|
 
-### Observations
+### Observations/Notes
 
 - Animal based products have a lot of protein and zero fiber
 - Rice is the worst thing you can eat. Most other grains like wheat, millets give decent amount of fiber, protein
