@@ -6,20 +6,18 @@ comments: true
 summary: "Investigating lock contention via java thread dumps"
 ---
 
-In this blog post, we will discuss how lock contention can be observed in java thread dumps. As part of the process, we will
-also describe one mechanism to emit JFRs for the java process.
+In this blog post, we will discuss how to investigate lock contention using Java thread dumps. As part of the process, we will also describe a mechanism for emitting Java Flight Recorder files (JFR) for the Java process and extracting thread dumps from them.
+
 
 # TL;DR
 
-We can use thread dumps to understand lock contention in java. `Lock` objects make it possible to understand
-which threads are waiting for a given lock instance. `synchronized` blocks go one step further and also tell the thread that is holding
-the lock.
+We can use thread dumps to understand lock contention in Java. Locking in java is done either by using `java.util.concurrent.locks.Lock` or `synchronized`. `Lock` makes it possible to identify which threads are waiting for a given lock instance. Synchronized blocks go one step further by also indicating the thread that is holding the lock.
 
 # Setup
 
-If you want to skip this section and directly go to the "Analyzing thread dumps" part, here are the links for code results
-* code: [Main.java](https://github.com/dotslash/jfr_explore/blob/main/src/main/java/io/github/dotslash/Main.java)
-* Results: https://github.com/dotslash/jfr_explore/tree/main/jfr : Contains JFR files and thread dump text files
+If you want to skip this section and directly go to the `Analyzing thread dumps` section, here are the links for code and outputs
+* Code: [Main.java](https://github.com/dotslash/jfr_explore/blob/main/src/main/java/io/github/dotslash/Main.java)
+* Outputs: https://github.com/dotslash/jfr_explore/tree/main/jfr : Contains JFR files and thread dump text files
 
 ### Options for locking in Java
 
@@ -27,8 +25,7 @@ In java there are 2 options to do locking 1) synchronized blocks and 2) Locks.
 
 Locks are more powerful
 1. they allow us to diffrentiate between shared and exclusive locks
-2. they allow us to try acquiring the lock with a
-timeout. This can be crucial in production environments to sensibly handle contentions.
+2. they allow us to try acquiring the lock with a timeout. This can be crucial in production environments to sensibly handle lock contentions.
 
 The following code snippet shows how to use synchronized blocks and locks in Java.
 
@@ -96,6 +93,7 @@ $ jfr summary jfr/lock-1715525551030.jfr
 ```
 
 The reason we pick JFRs over `jstack` 1) JFRs are more detailed 2) JFRs can be collected automatically from the JVM.
+
 The following code snippet shows how to emit JFRs from your java process. `runProgramWithJFR` is just a wrapper around
 `runProgram` that emits a JFR file for the duration of the `runProgram` method.
 
@@ -125,6 +123,7 @@ void runProgramWithJFR(String mode) {
   } catch (Exception e) {
     e.printStackTrace();
   }
+}
 ```
 
 ### More boiler plate
@@ -191,11 +190,11 @@ $ jfr_thread_dump lock-1715525551030.jfr
 ```
 
 
-The summary is that
+If we dig deeper into the thread dumps, we will learn that
 1. All the 3 mechanisms will show light on the threads that are blocked on a given lock
 2. Synchronzed though goes one step further and also tells the thread that is holding the lock
 
-The thread entries in the thread dump will look like this. For more details checkout 
+See the below code block to get a sense of how the the relevant threads in thread dump look like. For more details checkout 
 [lock-1715525551030.jfr_thread_dump.txt](https://github.com/dotslash/jfr_explore/tree/main/jfr/lock-1715525551030.jfr_thread_dump.txt), 
 [tryLock-1715525540531.jfr_thread_dump.txt](https://github.com/dotslash/jfr_explore/tree/main/jfr/tryLock-1715525540531.jfr_thread_dump.txt) and 
 [synchronized-1715525561096.jfr_thread_dump.txt](https://github.com/dotslash/jfr_explore/tree/main/jfr/synchronized-1715525561096.jfr_thread_dump.txt)
