@@ -11,8 +11,8 @@ also describe one mechanism to emit JFRs for the java process.
 
 # TL;DR
 
-We can use thread dumps to understand observe lock contention in java. `Lock` objects make it possible to understand
-which threads are waiting for lock. `synchronized` blocks go one step further and also tell the thread that is holding
+We can use thread dumps to understand lock contention in java. `Lock` objects make it possible to understand
+which threads are waiting for a given lock instance. `synchronized` blocks go one step further and also tell the thread that is holding
 the lock.
 
 # Setup
