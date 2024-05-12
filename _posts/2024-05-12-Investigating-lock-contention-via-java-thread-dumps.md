@@ -17,6 +17,10 @@ the lock.
 
 # Setup
 
+If you want to skip this section and directly go to the "Analyzing thread dumps" part, here are the links for code results
+* code: [Main.java](https://github.com/dotslash/jfr_explore/blob/main/src/main/java/io/github/dotslash/Main.java)
+* Results: https://github.com/dotslash/jfr_explore/tree/main/jfr : Contains JFR files and thread dump text files
+
 ### Options for locking in Java
 
 In java there are 2 options to do locking 1) synchronized blocks and 2) Locks. 
