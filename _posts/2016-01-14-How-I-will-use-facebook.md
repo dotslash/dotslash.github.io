@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How I will be using facebook
-tags: ['facebook']
+tags: ['non-tech']
 comments: true
 summary: "Why am I using facebook again"
 ---

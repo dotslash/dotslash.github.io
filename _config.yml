@@ -27,9 +27,8 @@ tag_title_suffix:   ""
 image_base:          /public/images/
 
 # Do not copy these file to the output directory
-exclude: ["transfer.sh", README.md, "codepg/", "drafts/"]
+exclude: [README.md, "drafts/"]
 
-#fb_appid:           337414769782635
 
 # Setup
 title:               Sai Teja Pratap
@@ -50,12 +49,12 @@ author:
 
 
 # Google sitemap generation
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
 
 paginate: 10
-paginate_path: "/blog/page:num"
+paginate_path: "/page:num"
 
 
 excerpt_separator: "<!--break-->"
@@ -64,9 +63,9 @@ kramdown:
   auto_ids: true
 
 pages_list:
-  Blog: '/blog/'
-  Quotes: '/quotes/'
-  Bookmarks: 'https://bm.yesteapea.com'
+  Bookmarks: 'https://bm.suram.in'
+  Blog Tags: '/tags'
+  Quotes: '/quotes'
 
 
 picture:

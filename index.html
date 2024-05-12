@@ -1,27 +1,40 @@
 ---
 layout: default
-title: About me
+title: Blog
 website: true
 ---
-<p>
-  I'm Sai Teja Pratap. I work for <a href="https://www.google.com">Google</a> as a Software Engineer.
-  I previously worked at <a href="https://www.crunchbase.com/organization/relcy-inc#/entity">Relcy, Inc</a> and <a href="http://rocketfuel.com/" target="_blank">Rocket Fuel, Inc</a>.
-  Before that I was doing my Bachelors in <a href="https://www.cse.iitb.ac.in/">Computer Science at IIT Bombay</a>
-</p>
 
-<p>
-Now that you are here, checkout something which might be of interest. </p>
-<ul>
-  <li>I blog occasionally at <a href='/blog/'>yesteapea.com/blog</a> (previously at <a href="http://yesteapea.wordpress.com">yesteapea.wordpress.com</a>) </li>
-  <li>My collection of quotes : <a href="/quotes">Quotes</a></li>
-  <li>I maintain my bookmarks at <a href="http://bm.suram.in">bm.suram.in</a>. The code for this can be found at <a href="https://github.com/dotslash/bookmarks">github.com/dotslash/bookmarks</a></li>
-  <li>Code for this website - <a href="https://github.com/dotslash/dotslash.github.io">github.com/dotslash/dotslash.github.io</a></li>
-  <li>My personal profiles -
-          <a href="https://twitter.com/yesTeaPea">yesteapea</a> on twitter,
-          <a href="https://www.goodreads.com/dotslash">dotslash</a> on goodreads </li>
-  <li>My 'professional' profiles -
-          <a href="https://github.com/dotslash">dotslash</a> on github, 
-          <a href="https://www.linkedin.com/in/stpratap">stpratap</a> on linkedin </li>
+<ul class="posts">
+  {% for post in paginator.posts %}
+  <li class="archive_list" style="list-style-type:none">
+    <time style="color:#666;font-size:11px;" datetime='{{post.date | date: "%Y-%m-%d"}}'>
+      {{post.date | date: "%m/%d/%y"}}</time>
+    <a class="archive_list_article_link" href='{{site.baseurl}}{{post.url}}'>
+      {{post.title}}</a>
+    <p class="summary">{{post.summary}}
+      {% for tag in post.tags %}
+      <a href="{{site.baseurl}}/tag/{{ tag }}">#{{ tag }}</a>
+      {% endfor %}</p>
+    </p>
+  </li>
+  {% endfor %}
 </ul>
 
-<br/>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+      Previous
+    </a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>

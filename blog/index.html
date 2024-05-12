@@ -3,7 +3,6 @@ layout: default
 title: Blog
 website: true
 ---
-
 <ul class="posts">
   {% for post in paginator.posts %}
   <li class="archive_list" style="list-style-type:none">
@@ -20,15 +19,21 @@ website: true
   {% endfor %}
 </ul>
 
+
 <div class="pagination">
-  {% if paginator.next_page %}
-  <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-  {% else %}
-  <span class="pagination-item older">Older</span>
-  {% endif %}
   {% if paginator.previous_page %}
-  <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+      Previous
+    </a>
   {% else %}
-  <span class="pagination-item newer">Newer</span>
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
   {% endif %}
 </div>

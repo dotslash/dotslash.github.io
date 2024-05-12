@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A framework to think about macronutrients in Indian food
-tags: ['nontech']
+tags: ['non-tech']
 comments: true
 summary: "A framework to think about macronutrients in Indian food"
 ---

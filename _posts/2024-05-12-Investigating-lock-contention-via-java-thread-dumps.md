@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Investigating lock contention via java thread dumps
-tags: ['tech']
+tags: ['tech', 'java']
 comments: true
 summary: "Investigating lock contention via java thread dumps"
 ---

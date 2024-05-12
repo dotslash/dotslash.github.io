@@ -2,8 +2,8 @@
 layout: post
 title: Why I quit Facebook
 comments: true
-summary: "The reason I quit facebook"
-tags: ['facebook']
+summary: "The reason I deleted my facebook account"
+tags: ['non-tech']
 ---
 
 ### Waiting for a trigger

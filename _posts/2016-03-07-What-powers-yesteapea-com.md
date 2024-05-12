@@ -1,7 +1,7 @@
 ---
 layout: post
-title: What powers yesteapea.com
-tags: ['tech' , 'golang', 'python', 'nginx']
+title: What powered yesteapea.com
+tags: ['tech']
 comments: true
 summary: "How, what and why about yesteapea.com"
 ---
